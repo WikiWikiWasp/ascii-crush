@@ -20,11 +20,14 @@ def title():
 
 
 # TODO: pythonic formating
+# TODO: difficulty validation
+# TODO: Help message
+# TODO: determine if menu() should return a value or serve as a "main" function and call the other game's functions
 def menu():
 
     while True:
         print('1. Play\n2. Help\n3. Quit\n')
-
+        # input validation
         try:
             choice = int(input('> '))
         except NameError:
@@ -35,6 +38,7 @@ def menu():
             print('Error. Invalid input. Enter a value between 1 - 3.\n')
             continue
 
+        # menu actions
         if choice == 1:
             print('Please choose difficulty:')
             print('1. Easy\n2. Medium\n3. Hard\n')
