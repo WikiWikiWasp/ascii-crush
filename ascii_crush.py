@@ -23,7 +23,7 @@ def menu():
         if choice == 1:
             print('Please choose difficulty:')
             print('1. Easy\n2. Medium\n3. Hard\n')
-            choice = input('> ')
+            diff = input('> ')
             cflag = False
         elif choice == 2:
             print('<Help Message>\n')
