@@ -21,6 +21,9 @@ def menu():
         print('1. Play\n2. Help\n3. Quit\n')
         choice = input('> ')
         if choice == 1:
+            print('Please choose difficulty:')
+            print('1. Easy\n2. Medium\n3. Hard\n')
+            choice = input('> ')
             cflag = False
         elif choice == 2:
             print('<Help Message>\n')
@@ -30,10 +33,6 @@ def menu():
         else:
             print('Please enter a valid menu choice:\n')
             choice = input('> ')
-
-    print('Please choose difficulty:')
-    print('1. Easy\n2. Medium\n3. Hard\n')
-    choice = input('> ')
 
 
 def draw_board():
