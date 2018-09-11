@@ -6,6 +6,12 @@
 
 import sys
 
+#terminal text colors
+BLUE = '\033[0;34m'
+RED = '\033[0;31m'
+GREEN = '\033[;32m'
+NC = '\033[0m' #no color
+
 def title():
     print('='*30)
     print('-'*7 + ' ASCII  CRUSH ' + '-'*7)
@@ -16,15 +22,23 @@ def title():
 # TODO: pythonic formating
 def menu():
 
-    cflag = True
-    while cflag:
+    while True:
         print('1. Play\n2. Help\n3. Quit\n')
-        choice = input('> ')
+
+        try:
+            choice = int(input('> '))
+        except NameError:
+            print('Error. Invalid input. Enter a value between 1 - 3.\n')
+            continue
+        
+        if not choice in range(1, 4):
+            print('Error. Invalid input. Enter a value between 1 - 3.\n')
+            continue
+
         if choice == 1:
             print('Please choose difficulty:')
             print('1. Easy\n2. Medium\n3. Hard\n')
             diff = input('> ')
-            cflag = False
         elif choice == 2:
             print('<Help Message>\n')
         elif choice == 3:
