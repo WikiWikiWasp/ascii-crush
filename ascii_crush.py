@@ -44,6 +44,7 @@ def menu():
             # print('1. Easy\n2. Medium\n3. Hard\n')
             # diff = input('> ')
             # TODO: draw and populate board
+            print('<game start>') # temp filler
             draw_board()
         elif choice == 2:
             print('<Help Message>\n')
