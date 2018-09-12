@@ -16,7 +16,7 @@ def title():
     print('='*30)
     print('-'*7 + ' ASCII  CRUSH ' + '-'*7)
     print('='*30)
-    print()
+    print
 
 
 # TODO: pythonic formating
@@ -24,7 +24,6 @@ def title():
 # TODO: determine if menu() should return a value or serve as a "main" function and call the other game's functions
 # TODO: docstrings for functions
 def menu():
-
     while True:
         print('1. Play\n2. Help\n3. Quit\n')
         # input validation
@@ -44,8 +43,9 @@ def menu():
             # print('1. Easy\n2. Medium\n3. Hard\n')
             # diff = input('> ')
             # TODO: draw and populate board
-            print('<game start>') # temp filler
-            draw_board()
+            # TODO: have selected difficulty determine size of board
+            draw_board(5, 5, 3)
+            break
         elif choice == 2:
             print('<Help Message>\n')
         elif choice == 3:
@@ -56,9 +56,19 @@ def menu():
             choice = input('> ')
 
 
-def draw_board():
-    pass
-
+# TODO: separate into smaller functions
+# TODO: figure out how to fill_board() without having to resize board
+def draw_board(rows, cols, ascii):
+    print('\n\n')
+    for x in range(cols):
+        print '   ' if x == 0 else '  ',
+        print str(chr(65+x)),
+    print
+    for x in range(rows):
+        print '   ---' + ' ---'*cols
+        print(str(x+1) + ' ' + '|   '*(cols+2))
+    print '   ---' + ' ---'*cols
+    print '\n\n'
 
 def fill_board():
     pass
@@ -73,4 +83,5 @@ def remove_match():
 
 
 if __name__ == '__main__':
+    title()
     menu()
