@@ -20,9 +20,9 @@ def title():
 
 
 # TODO: pythonic formating
-# TODO: difficulty validation
 # TODO: Help message
 # TODO: determine if menu() should return a value or serve as a "main" function and call the other game's functions
+# TODO: docstrings for functions
 def menu():
 
     while True:
@@ -40,9 +40,11 @@ def menu():
 
         # menu actions
         if choice == 1:
-            print('Please choose difficulty:')
-            print('1. Easy\n2. Medium\n3. Hard\n')
-            diff = input('> ')
+            # print('Please choose difficulty:')
+            # print('1. Easy\n2. Medium\n3. Hard\n')
+            # diff = input('> ')
+            # TODO: draw and populate board
+            draw_board()
         elif choice == 2:
             print('<Help Message>\n')
         elif choice == 3:
